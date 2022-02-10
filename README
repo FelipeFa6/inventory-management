@@ -1,0 +1,13 @@
+PAGE TEMPLATE
+
+---
+
+USE:
+I use this to organize a project quickly without bothering on libraries and
+folder organization.
+
+DESCRIPTION:
+Barebones HTML framework that contains:
+
+- jQuery 3.6.0
+- Boostrap 5.1.3
