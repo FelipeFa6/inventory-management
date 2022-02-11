@@ -7,8 +7,8 @@
     <title>Inventario</title>
 
     <!--style-->
-    <link rel="stylesheet" href="lib/css/bootstrap-5.1.3.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="public/lib/css/bootstrap-5.1.3.css" />
+    <link rel="stylesheet" href="public/style.css" />
 
     <style type="text/css" media="screen">
       /*Responsivo*/
@@ -37,10 +37,11 @@
     </style>
 
     <!--Scripts-->
-    <script src="lib/js/bootstrap.bundle.js"></script>
-    <script src="lib/js/jquery-3.6.0.js"></script>
+    <script src="public/lib/js/bootstrap.bundle.js"></script>
+    <script src="public/lib/js/jquery-3.6.0.js"></script>
   </head>
-  <body style="background-image: url(assets/imgs/bg.jpg);">
+
+  <body style="background-image: url(public/imgs/bg.jpg);">
     <div class="container" style="height: 100vh">
       <div class="row h-100 justify-content-center align-items-center">
         <div id="login-container" class="glass p-5 rounded-1">

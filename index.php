@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico" />
     <title>Inventario</title>
 
     <!--Font Awesome-->
@@ -13,8 +13,8 @@
     />
 
     <!--style-->
-    <link rel="stylesheet" href="lib/css/bootstrap-5.1.3.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="public/lib/css/bootstrap-5.1.3.css" />
+    <link rel="stylesheet" href="public/style.css" />
 
     <style type="text/css" media="screen">
       /*NavigationBar*/
@@ -51,14 +51,13 @@
     </style>
 
     <!--Scripts-->
-    <script src="lib/js/bootstrap.bundle.js"></script>
-    <script src="lib/js/jquery-3.6.0.js"></script>
+    <script src="public/lib/js/bootstrap.bundle.js"></script>
+    <script src="public/lib/js/jquery-3.6.0.js"></script>
   </head>
   <body>
 
     <!-- NavBar -->
-    <?php include "./inc/navbar.php"; ?>
-
+    <?php include "./includes/navbar.php"; ?>
 
     <!--Content-->
     <div class="content bg-white" style="height: 100vh">
