@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.content {
+  /* This is used to avoid the navbar overlap */
+  padding-top: 100px;
+}
+

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <title>Inventario</title>
 
     <!--style-->
@@ -17,7 +17,16 @@
       }
 
       #login-container {
-        max-width: 650px;
+        max-width: 500px;
+      }
+
+      .glass {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
       }
 
       @media only screen and (max-width: 1024px) {
@@ -30,22 +39,19 @@
     <!--Scripts-->
     <script src="lib/js/bootstrap.bundle.js"></script>
     <script src="lib/js/jquery-3.6.0.js"></script>
-    <!--<script src="js/main.js"></script>-->
   </head>
-  <body>
+  <body style="background-image: url(assets/imgs/bg.jpg);">
     <div class="container" style="height: 100vh">
       <div class="row h-100 justify-content-center align-items-center">
-        <div id="login-container" class="bg-white p-5 rounded-1">
-          <h1 class="text-center">Titulo</h1>
-          <form method="post">
+        <div id="login-container" class="glass p-5 rounded-1">
+          <h1 class="text-center">Login</h1>
+          <form method="get">
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label"
-                >Email address</label
-              >
+              <label for="InputEmail" class="form-label">Email address</label>
               <input
                 type="email"
-                class="form-control"
-                id="email"
+                class="form-control rounded-pill border-secondary"
+                id="inputEmail"
                 aria-describedby="emailHelp"
               />
               <div id="emailHelp" class="form-text">
@@ -54,13 +60,15 @@
             </div>
             <div class="mb-3">
               <label for="inputPassword" class="form-label">Password</label>
-              <input type="password" class="form-control" id="inputPassword" />
+              <input
+                type="password"
+                class="form-control rounded-pill border-secondary"
+                id="inputPassword"
+              />
             </div>
-            <div class="d-flex">
-              <button type="submit" class="btn btn-dark">Submit</button>
-              <a href="index.html">
-                <input type="button" class="btn btn-dark" value="Volver"/>
-              </a>
+            <div class="d-grid gap-3">
+              <button type="submit" class="btn btn-dark rounded">Submit</button>
+              <a href="index.php" class="g-2">Volver</a>
             </div>
           </form>
         </div>
