@@ -2,21 +2,15 @@ PAGE TEMPLATE
 
 ---
 
-USE:
-I use this to organize a project quickly without bothering on libraries and
-folder organization.
+DESCRIPTION
+Inventory management Web Software that has accounts for a single organization.
 
-DESCRIPTION:
-Barebones HTML framework that contains:
-
-- jQuery 3.6.0
-- Boostrap 5.1.3
-
-WORKFLOW:
+FOLDER TREE
 The workflow is pretty straight forward.
 
-7 directories
-./root
+./root        --> To avoid unncesesary complexity, the displayed pages are located on the root.
+├── index.php
+├── login.php
 ├── includes  --> Contains replicable stuff like Navbar, Footer, etc.
 ├── public    --> Everything that is on the Front End.
 │   ├── imgs  --> No need to explain this one.
