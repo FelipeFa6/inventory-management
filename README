@@ -7,9 +7,12 @@ Inventory management Web Software that has accounts for a single organization.
 FOLDER TREE
 The workflow is pretty straight forward.
 
-./root        --> To avoid unncesesary complexity, the displayed pages are located on the root.
+To avoid unncesesary complexity, pages are located on the root.
+
+./
 ├── index.php
 ├── login.php
+│
 ├── includes  --> Contains replicable stuff like Navbar, Footer, etc.
 ├── public    --> Everything that is on the Front End.
 │   ├── imgs  --> No need to explain this one.
