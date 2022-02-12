@@ -116,7 +116,7 @@
 
 
     <!--Add Categoria-->
-    <div class="container my-5 py-5 border">
+    <div class="container my-5 py-5 border" id="agregar">
       <div class="text-center">
         <h1>Agregar categoria.</h1>
       </div>
