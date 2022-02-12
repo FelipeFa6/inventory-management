@@ -3,12 +3,11 @@ PHP Inventory Management
 ---
 
 DESCRIPTION
-Inventory management Web Software that has accounts for a single organization.
+  Inventory management Web Software that has accounts for a single organization.
 
 FOLDER TREE
-The workflow is pretty straight forward.
-
-To avoid unncesesary complexity, pages are located on the root.
+  The workflow is pretty straight forward.
+  To avoid unncesesary complexity, pages are located on the root.
 
 ./
 ├── index.php
