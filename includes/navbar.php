@@ -34,7 +34,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="index.php">Navbar</a>
+    <a class="navbar-brand" href="index.php">Inventario</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -53,9 +53,6 @@
             >Home</a
           >
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="historial.php">Historial</a>
-        </li>
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
@@ -66,9 +63,14 @@
           >
             Utilidades
           </a>
-          <ul class="dropdown-menu ps-2" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li class="">
+              <a class="dropdown-item" href="historial.php">Historial</a>
+            </li>
             <li><a class="dropdown-item" href="productos.php">Productos</a></li>
-            <li><a class="dropdown-item" href="categorias.php">Categorias</a></li>
+            <li>
+              <a class="dropdown-item" href="categorias.php">Categorias</a>
+            </li>
           </ul>
         </li>
       </ul>
@@ -101,7 +103,10 @@
               <li><a class="dropdown-item" href="#">Opciones</a></li>
               <li><hr class="dropdown-divider" /></li>
               <li>
-                <a class="dropdown-item text-danger" href="#">Cerrar sesion <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                <a class="dropdown-item text-danger" href="#"
+                  >Cerrar sesion
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i
+                ></a>
               </li>
             </ul>
           </li>
