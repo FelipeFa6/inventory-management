@@ -14,6 +14,12 @@
 ?>
 
 <style type="text/css" media="screen">
+  .navbar {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+  }
+
   @media only screen and (max-width: 1024px) {
     #search-bar {
       max-width: 200px;
@@ -61,8 +67,8 @@
             Utilidades
           </a>
           <ul class="dropdown-menu ps-2" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Productos</a></li>
-            <li><a class="dropdown-item" href="#">Categorias</a></li>
+            <li><a class="dropdown-item" href="productos.php">Productos</a></li>
+            <li><a class="dropdown-item" href="categorias.php">Categorias</a></li>
           </ul>
         </li>
       </ul>

@@ -7,7 +7,6 @@
  */
 ?>
 
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -27,14 +26,6 @@
     <link rel="stylesheet" href="public/style.css" />
 
     <style type="text/css" media="screen">
-      /*NavigationBar*/
-      .navbar {
-        position: fixed;
-        z-index: 2;
-        width: 100%;
-      }
-
-
       /* Cards */
       .item {
         min-width: 200px;
@@ -76,50 +67,53 @@
           <div class="row align-items-center d-flex justify-content-evenly">
             <!--Column1-->
             <div class="col m-3">
-              <div
-                class="
-                  item
-                  rounded
-                  p-4
-                  border
-                  bg-light
-                  d-flex
-                  align-items-center
-                  justify-content-between
-                "
-              >
-                <div class="ms-4">
-                  <p class="h1">Historial</p>
-                  <p class="text-muted">100</p>
+              <a href="productos.php" class="text-dark">
+                <div
+                  class="
+                    item
+                    rounded
+                    p-4
+                    border
+                    bg-light
+                    d-flex
+                    align-items-center
+                    justify-content-between
+                  "
+                >
+                  <div class="ms-4">
+                    <p class="h3">Productos</p>
+                    <p class="text-muted">2000</p>
+                  </div>
+                  <div class="display-2">
+                    <i class="fa-solid fa-cart-flatbed"></i>
+                  </div>
                 </div>
-                <div class="display-2">
-                  <i class="fa-solid fa-folder" style="color: #eed202"></i>
-                </div>
-              </div>
+              </a>
             </div>
-
             <!--Column2-->
             <div class="col m-3">
-              <div
-                class="
-                  item
-                  rounded
-                  p-4
-                  border
-                  bg-light
-                  d-flex
-                  align-items-center
-                  justify-content-between
-                "
-              >
-                <div class="ms-4">
-                  <p class="h1 text-center">Categorias</p>
-                  <p class="text-muted">5</p>
+              <a href="categorias.php" class="text-dark">
+                <div
+                  class="
+                    item
+                    rounded
+                    p-4
+                    border
+                    bg-light
+                    d-flex
+                    align-items-center
+                    justify-content-between
+                  "
+                >
+                  <div class="ms-4">
+                    <p class="h3 text-center">Categorias</p>
+                    <p class="text-muted">5</p>
+                  </div>
+                  <div class="display-2">
+                    <i class="fa-solid fa-file"></i>
+                  </div>
                 </div>
-                <div class="display-2">
-                  <i class="fa-solid fa-file"></i>
-                </div>
-              </div>
+              </a>
             </div>
           </div>
           <!--End of Row1-->
@@ -127,28 +121,29 @@
           <!--Row 2-->
           <div class="row align-items-center d-flex justify-content-evenly">
             <!--Column1-->
-
             <div class="col m-3">
-              <div
-                class="
-                  item
-                  rounded
-                  p-4
-                  border
-                  bg-light
-                  d-flex
-                  align-items-center
-                  justify-content-between
-                "
-              >
-                <div class="ms-4">
-                  <p class="h1">Productos</p>
-                  <p class="text-muted">2000</p>
+              <a href="historial.php" class="text-dark">
+                <div
+                  class="
+                    item
+                    rounded
+                    p-4
+                    border
+                    bg-light
+                    d-flex
+                    align-items-center
+                    justify-content-between
+                  "
+                >
+                  <div class="ms-4">
+                    <p class="h3">Historial</p>
+                    <p class="text-muted">2000 acciones</p>
+                  </div>
+                  <div class="display-2">
+                    <i class="fa-solid fa-box-archive"></i>
+                  </div>
                 </div>
-                <div class="display-2">
-                  <i class="fa-solid fa-cart-flatbed"></i>
-                </div>
-              </div>
+              </a>
             </div>
           </div>
           <!--End of Row2-->
