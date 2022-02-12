@@ -1,3 +1,15 @@
+<?php
+/* See LICENSE file for copyright and license details.
+ * 
+ * ToDo:
+ * - Verify data (If possible, use php on the same file).
+ * - Make use of functions.php file to login.
+ * - Start session and redirect to index. 
+ *
+ */
+?>
+
+
 <!DOCTYPE html>
 <html>
   <head>

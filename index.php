@@ -1,3 +1,13 @@
+<?php
+/* See LICENSE file for copyright and license details.
+ * 
+ * ToDo:
+ * - Load session arguments [id, username].
+ *
+ */
+?>
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -24,11 +34,6 @@
         width: 100%;
       }
 
-      @media only screen and (max-width: 1024px) {
-        #search-bar {
-          max-width: 200px;
-        }
-      }
 
       /* Cards */
       .item {
@@ -55,7 +60,6 @@
     <script src="public/lib/js/jquery-3.6.0.js"></script>
   </head>
   <body>
-
     <!-- NavBar -->
     <?php include "./includes/navbar.php"; ?>
 
@@ -85,11 +89,11 @@
                 "
               >
                 <div class="ms-4">
-                  <p class="h1">200</p>
-                  <p class="text-muted">Productos</p>
+                  <p class="h1">Historial</p>
+                  <p class="text-muted">100</p>
                 </div>
                 <div class="display-2">
-                  <i class="fa-solid fa-otter"></i>
+                  <i class="fa-solid fa-folder" style="color: #eed202"></i>
                 </div>
               </div>
             </div>
@@ -109,11 +113,11 @@
                 "
               >
                 <div class="ms-4">
-                  <p class="h1">200</p>
-                  <p class="text-muted">Categorias</p>
+                  <p class="h1 text-center">Categorias</p>
+                  <p class="text-muted">5</p>
                 </div>
                 <div class="display-2">
-                  <i class="fa-solid fa-otter"></i>
+                  <i class="fa-solid fa-file"></i>
                 </div>
               </div>
             </div>
@@ -123,30 +127,7 @@
           <!--Row 2-->
           <div class="row align-items-center d-flex justify-content-evenly">
             <!--Column1-->
-            <div class="col m-3">
-              <div
-                class="
-                  item
-                  rounded
-                  p-4
-                  border
-                  bg-light
-                  d-flex
-                  align-items-center
-                  justify-content-between
-                "
-              >
-                <div class="ms-4">
-                  <p class="h1 text-center">200</p>
-                  <p class="text-muted">Item</p>
-                </div>
-                <div class="display-2">
-                  <i class="fa-solid fa-otter"></i>
-                </div>
-              </div>
-            </div>
 
-            <!--Column2-->
             <div class="col m-3">
               <div
                 class="
@@ -161,35 +142,11 @@
                 "
               >
                 <div class="ms-4">
-                  <p class="h1 text-center">Items</p>
-                  <p class="text-muted">200</p>
+                  <p class="h1">Productos</p>
+                  <p class="text-muted">2000</p>
                 </div>
                 <div class="display-2">
-                  <i class="fa-solid fa-otter"></i>
-                </div>
-              </div>
-            </div>
-
-            <!--Column3-->
-            <div class="col m-3">
-              <div
-                class="
-                  item
-                  rounded
-                  p-4
-                  border
-                  bg-light
-                  d-flex
-                  align-items-center
-                  justify-content-between
-                "
-              >
-                <div class="ms-4">
-                  <p class="h1 text-center">200</p>
-                  <p class="text-muted">Item</p>
-                </div>
-                <div class="display-2">
-                  <i class="fa-solid fa-otter"></i>
+                  <i class="fa-solid fa-cart-flatbed"></i>
                 </div>
               </div>
             </div>
