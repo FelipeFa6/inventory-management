@@ -12,6 +12,9 @@ FOLDER TREE
 ./
 ├── index.php
 ├── login.php
+├── productos.php
+├── categorias.php
+├── historial.php
 │
 ├── includes  --> Contains replicable stuff like Navbar, Footer, etc.
 ├── public    --> Everything that is on the Front End.
