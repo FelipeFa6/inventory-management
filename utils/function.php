@@ -51,30 +51,41 @@ function getAllData($table)
 
 function printTable($result, $table)
 {
-  echo $table;
   while ($array = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     switch ($table) {
       case "producto":
         echo "<tr>";
-        echo "<th scope='row'>". $array['id']."</th>";
-        echo "<td>". $array['nombre']."</td>";
-        echo "<td>". $array['precio']."</td>";
-        echo "<td>". $array['stock']."</td>";
-        echo "<td>". $array['fk_categoria']."</td>";
+        echo "<th scope='row'>" . $array["id"] . "</th>";
+        echo "<td>" . $array["nombre"] . "</td>";
+        echo "<td>" . $array["precio"] . "</td>";
+        echo "<td>" . $array["stock"] . "</td>";
+        echo "<td>" . $array["fk_categoria"] . "</td>";
         echo "</tr>";
         break;
 
       case "categoria":
         echo "<tr>";
-        echo "<th scope='row'>". $array['id']."</th>";
-        echo "<td>". $array['nombre']."</td>";
+        echo "<th scope='row'>" . $array["id"] . "</th>";
+        echo "<td>" . $array["nombre"] . "</td>";
         echo "<td>";
         echo "<button type='button' class='btn btn-sm btn-danger'>Borrar </button>";
         echo "</td>";
+        echo "</tr>";
+        break;
+
+      case "historial":
+        echo "<tr>";
+        echo "<th scope='row'>" . $array["id"] . "</th>";
+        echo "<td>" . $array["descripcion"] . "</td>";
+        echo "<td>" . $array["fecha"] . "</td>";
+        echo "<td>" . $array["fk_cuenta"] . "</td>";
+        echo "<td>" . $array["fk_producto"] . "</td>";
+        echo "</tr>";
         break;
 
       default:
-        echo "printTable() does not recognize \$table.";
+        echo "Switch option not recognized in the 'printTable()' function.<br>";
+        echo "Check under utils/function.php the 'printTable() function'";
         break;
     }
   }
