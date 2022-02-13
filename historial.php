@@ -41,8 +41,8 @@
     <!--Content-->
     <div class="content container bg-white" style="height: 100vh">
       <div class="text-center">
-        <h1>Categorias</h1>
-        <p>Todas las categorias.</p>
+        <h1>Historial</h1>
+        <p>Todos los cambios realizados.</p>
       </div>
 
       <div class="container border border-2 rounded h-75 overflow-auto">
