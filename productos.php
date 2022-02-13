@@ -5,7 +5,11 @@
 * - Load DB content.
 * - Load session arguments [id, username].
 *
-*/
+ */
+
+$_POST['table'] = 'producto';
+include 'utils/function.php';
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -58,13 +62,9 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>WD-40</td>
-              <td>$ 2.000</td>
-              <td>3</td>
-              <td>Lubricante</td>
-            </tr>
+          <?php
+            getAllData($_POST['table']);
+          ?>
           </tbody>
         </table>
       </div>

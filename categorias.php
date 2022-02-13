@@ -1,11 +1,14 @@
 <?php
 /* See LICENSE file for copyright and license details.
-* 
-* ToDo:
-* - Load DB content.
-* - Load session arguments [id, username].
-*
-*/
+ *
+ * ToDo:
+ * - Load DB content.
+ * - Load session arguments [id, username].
+ *
+ */
+
+$_POST["table"] = "categoria";
+include "utils/function.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -52,42 +55,9 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Limpiador</td>
-              <td>
-                <button type="button" class="btn btn-sm btn-danger">
-                  Borrar
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Ruedas</td>
-              <td>
-                <button type="button" class="btn btn-sm btn-danger">
-                  Borrar
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Pintura</td>
-              <td>
-                <button type="button" class="btn btn-sm btn-danger">
-                  Borrar
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td>Otro</td>
-              <td>
-                <button type="button" class="btn btn-sm btn-danger">
-                  Borrar
-                </button>
-              </td>
-            </tr>
+          <?php
+            getAllData($_POST['table']);
+          ?>
           </tbody>
         </table>
       </div>

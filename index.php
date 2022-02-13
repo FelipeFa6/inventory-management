@@ -1,6 +1,6 @@
 <?php
 /* See LICENSE file for copyright and license details.
- * 
+ *
  * ToDo:
  * - Load session arguments [id, username].
  *
