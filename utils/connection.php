@@ -1,15 +1,10 @@
 <?php
 /* See LICENSE file for copyright and license details.
  *
- * Usage on parent directory:
- * ---
- * 	require "utils/connection.php";
- * 	$conf = include_once "utils/config.php";
+ * This file is originally intended to be called only
+ * on the functions.php file.
  *
- * This is done because you (as a developer) will
- * use the config file (utils/config.php) in the
- * parent file. This is done to avoid loading the
- * same file multiple times
+ * This is done to only import 1 file (functions.php).
  *
  * Dependencies:
  * ---
@@ -19,18 +14,21 @@
  *  extension=mysqli
  *
  */
+function connect($conf)
+{
+  $db_host = $conf["db"]["host"];
+  $db_username = $conf["db"]["username"];
+  $db_password = $conf["db"]["password"];
+  $db_name = $conf["db"]["name"];
 
-$conf = include "config.php";
+  try {
+    $conn = mysqli_connect($db_host, $db_username, $db_password, $db_name);
+    //echo "Connection Successful!"; //Used for debugging
 
-$db_host = $conf["db"]["host"];
-$db_username = $conf["db"]["username"];
-$db_password = $conf["db"]["password"];
-$db_name = $conf["db"]["name"];
-
-try {
-  $conn = mysqli_connect($db_host, $db_username, $db_password, $db_name);
-  //echo "Connection Successful!"; //Used for debugging
-} catch (Exception $E) {
-  echo "Failed to connect! <br>";
-  echo $E->getMessage();
+    return $conn;
+  } catch (Exception $E) {
+    echo "Failed to connect! <br>";
+    echo $E->getMessage();
+    return false;
+  }
 }

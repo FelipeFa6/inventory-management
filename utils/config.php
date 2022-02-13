@@ -1,5 +1,6 @@
 <?php
-/* See LICENSE file for copyright and license details. */
+/* See LICENSE file for copyright and license details.*/
+
 return [
   "db" => [
     "host" => "127.0.0.1",
