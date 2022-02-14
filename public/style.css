@@ -2,10 +2,10 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-
 }
 
-a, u {
+a,
+u {
   text-decoration: none !important;
 }
 .content {
@@ -13,3 +13,40 @@ a, u {
   padding-top: 75px;
 }
 
+.item {
+  min-width: 200px;
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.item:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
+.item-ico {
+  font-size: 3em;
+}
+
+/*Login Screen*/
+#login-container {
+  max-width: 500px;
+}
+
+.glass {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+@media only screen and (max-width: 1024px) {
+  #login-container {
+    width: 100%;
+  }
+}

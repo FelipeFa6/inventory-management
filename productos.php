@@ -1,15 +1,14 @@
 <?php
 /* See LICENSE file for copyright and license details.
-* 
-* ToDo:
-* - Load DB content.
-* - Load session arguments [id, username].
-*
+ *
+ * ToDo:
+ * - Load DB content.
+ * - Load session arguments [id, username].
+ *
  */
 
-$_POST['table'] = 'producto';
-include 'utils/function.php';
-
+$_POST["table"] = "producto";
+include "utils/function.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,17 +24,33 @@ include 'utils/function.php';
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
 
-    <!--style-->
-    <link rel="stylesheet" href="public/lib/css/bootstrap-5.1.3.css" />
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap CSS local fallback -->
+    <script>
+      var test = document.createElement("div");
+      test.className = "hidden d-none";
+
+      document.head.appendChild(test);
+      var cssLoaded = window.getComputedStyle(test).display === "none";
+      document.head.removeChild(test);
+
+      if (!cssLoaded) {
+        var link = document.createElement("link");
+        link.type = "text/css";
+        link.rel = "stylesheet";
+        link.href = "lib/css/bootstrap-5.1.3.css";
+
+        document.head.appendChild(link);
+      }
+    </script>
+    <!-- Custom Style -->
     <link rel="stylesheet" href="public/style.css" />
-
-    <style type="text/css" media="screen">
-      /*Custom Style*/
-    </style>
-
-    <!--Scripts-->
-    <script src="public/lib/js/bootstrap.bundle.js"></script>
-    <script src="public/lib/js/jquery-3.6.0.js"></script>
   </head>
 
   <body>
@@ -62,9 +77,7 @@ include 'utils/function.php';
             </tr>
           </thead>
           <tbody>
-          <?php
-            getAllData($_POST['table']);
-          ?>
+          <?php getAllData($_POST["table"]); ?>
           </tbody>
         </table>
       </div>
@@ -120,7 +133,7 @@ include 'utils/function.php';
         </div>
 
         <div class="input-group mb-3">
-          <span class="input-group-text">N°</span>
+          <span class="input-group-text">Stock</span>
           <input
             type="number"
             class="form-control"
@@ -146,5 +159,21 @@ include 'utils/function.php';
         />
       </form>
     </div>
+
+    <!-- Scripts -->
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap JS Bundle CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
   </body>
 </html>

@@ -16,6 +16,7 @@ FOLDER TREE
 ├── categorias.php
 ├── historial.php
 │
+│── lib       --> Proyect libraries.
 ├── includes  --> Contains replicable stuff like Navbar, Footer, etc.
 ├── public    --> Everything that is on the Front End.
 │   ├── imgs  --> No need to explain this one.

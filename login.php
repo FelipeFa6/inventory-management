@@ -15,42 +15,67 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico" />
     <title>Inventario</title>
 
-    <!--style-->
-    <link rel="stylesheet" href="public/lib/css/bootstrap-5.1.3.css" />
+    <!--Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap CSS local fallback -->
+    <script>
+      var test = document.createElement("div");
+      test.className = "hidden d-none";
+
+      document.head.appendChild(test);
+      var cssLoaded = window.getComputedStyle(test).display === "none";
+      document.head.removeChild(test);
+
+      if (!cssLoaded) {
+        var link = document.createElement("link");
+        link.type = "text/css";
+        link.rel = "stylesheet";
+        link.href = "lib/css/bootstrap-5.1.3.css";
+
+        document.head.appendChild(link);
+      }
+    </script>
+    <!-- Custom Style -->
     <link rel="stylesheet" href="public/style.css" />
 
-    <style type="text/css" media="screen">
-      /*Responsivo*/
-      body {
-        background-color: #181818;
-      }
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery local fallback -->
+    <script>
+      window.jQuery ||
+        document.write('<script src="lib/js/jquery-3.6.0.js"><\/script>');
+    </script>
 
-      #login-container {
-        max-width: 500px;
+    <!-- Bootstrap JS Bundle CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap JS Bundle local fallback -->
+    <script>
+      if (typeof $.fn.modal === "undefined") {
+        document.write('<script src="lib/js/bootstrap.bundle.js"><\/script>');
       }
-
-      .glass {
-        /* From https://css.glass */
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 20px;
-        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-      }
-
-      @media only screen and (max-width: 1024px) {
-        #login-container {
-          width: 100%;
-        }
-      }
-    </style>
-
-    <!--Scripts-->
-    <script src="public/lib/js/bootstrap.bundle.js"></script>
-    <script src="public/lib/js/jquery-3.6.0.js"></script>
+    </script>
   </head>
 
   <body style="background-image: url(public/imgs/bg.jpg);">
@@ -87,5 +112,31 @@
         </div>
       </div>
     </div>
+
+    <!-- Scripts -->
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery local fallback -->
+    <script>
+      window.jQuery ||
+        document.write('<script src="lib/jquery-3.6.0.js"><\/script>');
+    </script>
+
+    <!-- Bootstrap JS Bundle CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap JS Bundle local fallback -->
+    <script>
+      if (typeof $.fn.modal === "undefined") {
+        document.write('<script src="lib/js/bootstrap.bundle.js"><\/script>');
+      }
+    </script>
   </body>
 </html>
