@@ -50,7 +50,7 @@
 
   <body>
     <!-- NavBar -->
-    <?php include "includes/navbar.php"; ?>
+    <?php include "navbar.php"; ?>
 
     <!--Content-->
     <div class="content bg-white" style="height: 100vh">

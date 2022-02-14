@@ -9,21 +9,19 @@ FOLDER TREE
   The workflow is pretty straight forward.
   To avoid unncesesary complexity, pages are located on the root.
 
-./
+root/
 ├── index.php
 ├── login.php
 ├── productos.php
 ├── categorias.php
 ├── historial.php
+├── navbar.php
 │
-│── lib       --> Proyect libraries.
-├── includes  --> Contains replicable stuff like Navbar, Footer, etc.
-├── public    --> Everything that is on the Front End.
-│   ├── imgs  --> No need to explain this one.
-│   └── lib   --> External libraries like Bootstrap and jQuery.
-│       ├── css
-│       └── js
-└── utils     --> PHP utilities like config files, functions, etc.
+├── lib       --> Proyect libraries.
+├── utils     --> PHP utilities like config files, functions, etc.
+└── public
+    └── imgs
+
 
 AUTHOR
   Felipe Farias <felipe.farias.e1@gmail.com>
