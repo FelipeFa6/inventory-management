@@ -1,11 +1,5 @@
 <?php
-/* See LICENSE file for copyright and license details.
- *
- * ToDo:
- * - Load DB content.
- * - Load session arguments [id, username].
- *
- */
+/* See LICENSE file for copyright and license details.*/
 
 $_POST["table"] = "categoria";
 include "utils/function.php";
@@ -108,7 +102,13 @@ include "utils/function.php";
         <h1>Agregar categoria.</h1>
       </div>
 
-      <form class="py-2">
+      <form class="py-2" method="POST" action="utils/create.php">
+          <input
+            type="hidden"
+            name="table"
+            id="table"
+            value="categoria"
+          />
         <div class="input-group mb-3">
           <input
             type="text"
@@ -122,8 +122,8 @@ include "utils/function.php";
         <input
           class="mt-2 btn btn-outline-success"
           type="submit"
-          name="agregar"
-          value="Listo"
+          name="submit"
+          value="submit"
         />
       </form>
     </div>

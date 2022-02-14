@@ -67,9 +67,9 @@
             <li class="">
               <a class="dropdown-item" href="historial.php">Historial</a>
             </li>
-            <li><a class="dropdown-item" href="productos.php">Productos</a></li>
+            <li><a class="dropdown-item" href="producto.php">Productos</a></li>
             <li>
-              <a class="dropdown-item" href="categorias.php">Categorias</a>
+              <a class="dropdown-item" href="categoria.php">Categorias</a>
             </li>
           </ul>
         </li>

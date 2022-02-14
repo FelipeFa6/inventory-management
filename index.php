@@ -65,7 +65,7 @@
           <div class="row align-items-center d-flex justify-content-evenly">
             <!--Column1-->
             <div class="col m-3">
-              <a href="productos.php" class="text-dark">
+              <a href="producto.php" class="text-dark">
                 <div
                   class="
                     item
@@ -90,7 +90,7 @@
             </div>
             <!--Column2-->
             <div class="col m-3">
-              <a href="categorias.php" class="text-dark">
+              <a href="categoria.php" class="text-dark">
                 <div
                   class="
                     item

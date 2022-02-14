@@ -1,11 +1,6 @@
 <?php
-/* See LICENSE file for copyright and license details.
-* 
-* ToDo:
-* - Load DB content.
-* - Load session arguments [id, username].
-*
-*/
+/* See LICENSE file for copyright and license details.*/
+
 ?>
 <!DOCTYPE html>
 <html>

@@ -111,7 +111,13 @@ include "utils/function.php";
         <h1>Agregar producto.</h1>
       </div>
 
-      <form class="py-2">
+      <form class="py-2" method="POST" action="utils/create.php">
+          <input
+            type="hidden"
+            name="table"
+            id="table"
+            value="producto"
+          />
         <div class="input-group mb-3">
           <input
             type="text"
@@ -129,6 +135,8 @@ include "utils/function.php";
             type="number"
             class="form-control"
             aria-label="Precio (en CLP)"
+            name="precio"
+            id="input-precio"
           />
         </div>
 
@@ -137,14 +145,16 @@ include "utils/function.php";
           <input
             type="number"
             class="form-control"
-            aria-label="Precio (en CLP)"
+            name="stock"
+            id="input-stock"
           />
           <span class="input-group-text">Categoria</span>
           <input
             class="form-control"
             list="categoryList"
             id="search"
-            placeholder="Categorias"
+            name="categoria"
+            id="input-categoria"
           />
           <datalist id="categoryList">
             <!--Fill this with the database -->
@@ -154,8 +164,8 @@ include "utils/function.php";
         <input
           class="mt-2 btn btn-outline-success"
           type="submit"
-          name="agregar"
-          value="Listo"
+          name="submit"
+          value="submit"
         />
       </form>
     </div>

@@ -14,27 +14,16 @@
 function getAllData($table)
 {
   /*
-   * The table parameter is supposed to be used
-   * as a 'switch' and it is passed through
-   * POST variables on the URL.
-   *
-   * USAGE examples:
-   *  productos.php?table=producto
-   *  categorias.php?table=categoria
-   *  etc.php?table=etc
-   *
+   * The table parameter is passed through
+   * POST Method.
    */
 
   if (!isset($table)) {
-    echo "Item not passed on GET method.";
+    echo "Table not passed on POST method.";
     die();
   }
 
-  //I dont like this use of the config file
-  $conf = require_once "utils/config.php";
-  require_once "utils/connection.php";
-
-  $conn = connect($conf); // Create connection
+  $conn = require_once $_SERVER["DOCUMENT_ROOT"] . "/utils/connection.php"; //Create connection
   if ($conn === false) {
     echo "Connection failed";
     mysqli_close($conn);
@@ -85,9 +74,103 @@ function printTable($result, $table)
 
       default:
         echo "Switch option not recognized in the 'printTable()' function.<br>";
-        echo "Check under utils/function.php the 'printTable() function'";
+        echo "Check under utils/function.php the 'printTable()' function";
+        die();
         break;
     }
   }
+}
+
+function createObject($table, $dataArray)
+{
+  /*
+   * $table parameter is passed through POST Method.
+   * $dataArray is passed through the form.
+   * */
+
+  if (!isset($table)) {
+    echo "Table not passed on POST method.";
+    die();
+  }
+
+  if (!isset($dataArray)) {
+    echo "Data not passed on form.";
+    die();
+  }
+
+  $conn = require_once $_SERVER["DOCUMENT_ROOT"] . "/utils/connection.php"; //Create connection
+  switch ($table) {
+    case "producto":
+      $query = "INSERT INTO $table (nombre, precio, stock, fk_categoria) VALUES (?, ?, ?, ?);";
+      $dataTypes = "sdii";
+      $stmt = mysqli_prepare($conn, $query);
+      mysqli_stmt_bind_param(
+        $stmt,
+        $dataTypes,
+        $nombre,
+        $precio,
+        $stock,
+        $fk_categoria
+      );
+      $nombre = $dataArray["producto"]["nombre"];
+      $precio = $dataArray["producto"]["precio"];
+      $stock = $dataArray["producto"]["stock"];
+      $fk_categoria = $dataArray["producto"]["fk_categoria"];
+      break;
+
+    case "categoria":
+      $query = "INSERT INTO $table (nombre) VALUES (?);";
+      $dataTypes = "s";
+      $stmt = mysqli_prepare($conn, $query);
+      mysqli_stmt_bind_param($stmt, $dataTypes, $nombre);
+      $nombre = $dataArray["categoria"]["nombre"];
+      break;
+
+    case "historial":
+      $query = "INSERT INTO $table (descripcion, fecha, fk_cuenta, fk_producto) VALUES (?, ?, ?, ?);";
+      $dataTypes = "ssii";
+      $stmt = mysqli_prepare($conn, $query);
+      mysqli_stmt_bind_param(
+        $stmt,
+        $dataTypes,
+        $descripcion,
+        $fecha,
+        $fk_cuenta,
+        $fk_producto
+      );
+      $descripcion = $dataArray["historial"]["descripcion"];
+      $fecha = $dataArray["historial"]["fecha"];
+      $fk_cuenta = $dataArray["historial"]["fk_cuenta"];
+      $fk_producto = $dataArray["historial"]["fk_producto"];
+      break;
+
+    case "cuenta":
+      $query = "INSERT INTO $table (username, email, telefono, password) VALUES (?, ?, ?, ?);";
+      $dataTypes = "ssss";
+      $stmt = mysqli_prepare($conn, $query);
+      mysqli_stmt_bind_param(
+        $stmt,
+        $dataTypes,
+        $username,
+        $email,
+        $telefono,
+        $password
+      );
+      $username = $dataArray["cuenta"]["username"];
+      $email = $dataArray["cuenta"]["email"];
+      $telefono = $dataArray["cuenta"]["telefono"];
+      $password = $dataArray["cuenta"]["password"];
+      break;
+
+    default:
+      echo "Switch option not recognized in the 'createObject()' function.<br>";
+      echo "Check under utils/function.php the 'createObject()' function.";
+      die();
+      break;
+  }
+
+  mysqli_stmt_execute($stmt);
+  printf("%d row inserted.\n", mysqli_stmt_affected_rows($stmt));
+  mysqli_stmt_close($stmt);
 }
 ?>

@@ -14,21 +14,21 @@
  *  extension=mysqli
  *
  */
-function connect($conf)
-{
-  $db_host = $conf["db"]["host"];
-  $db_username = $conf["db"]["username"];
-  $db_password = $conf["db"]["password"];
-  $db_name = $conf["db"]["name"];
 
-  try {
-    $conn = mysqli_connect($db_host, $db_username, $db_password, $db_name);
-    //echo "Connection Successful!"; //Used for debugging
+$conf = include_once $_SERVER["DOCUMENT_ROOT"] . "/utils/config.php";
 
-    return $conn;
-  } catch (Exception $E) {
-    echo "Failed to connect! <br>";
-    echo $E->getMessage();
-    return false;
-  }
+$db_host = $conf["db"]["host"];
+$db_username = $conf["db"]["username"];
+$db_password = $conf["db"]["password"];
+$db_name = $conf["db"]["name"];
+
+try {
+  $conn = mysqli_connect($db_host, $db_username, $db_password, $db_name);
+  //echo "Connection Successful!"; //Used for debugging
+
+  return $conn;
+} catch (Exception $E) {
+  echo "Failed to connect! <br>";
+  echo $E->getMessage();
+  return false;
 }
