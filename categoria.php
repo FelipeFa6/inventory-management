@@ -58,6 +58,12 @@ include "utils/function.php";
       </div>
 
       <div class="container border border-2 rounded h-75 overflow-auto">
+      <?php
+        if (isset($_GET["msg"])) {
+          echo "<span class='text-muted'>".$_GET['msg']."</span>";
+        }
+        ?>
+
         <!--Fill this with a table -->
         <table class="table table-striped table-hover">
           <thead>
@@ -68,7 +74,7 @@ include "utils/function.php";
             </tr>
           </thead>
           <tbody>
-          <?php getAllData($_POST["table"]); ?>
+            <?php getAllData($_POST["table"]); ?>
           </tbody>
         </table>
       </div>
@@ -95,7 +101,6 @@ include "utils/function.php";
       </form>
     </div>
 
-
     <!--Add Categoria-->
     <div class="container my-5 py-5 border" id="agregar">
       <div class="text-center">
@@ -103,12 +108,7 @@ include "utils/function.php";
       </div>
 
       <form class="py-2" method="POST" action="utils/create.php">
-          <input
-            type="hidden"
-            name="table"
-            id="table"
-            value="categoria"
-          />
+        <input type="hidden" name="table" id="table" value="categoria" />
         <div class="input-group mb-3">
           <input
             type="text"

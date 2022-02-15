@@ -26,7 +26,6 @@ if (!isset($_POST["table"])) {
 $table = $_POST["table"];
 
 // Data arrangemente
-//
 switch ($table) {
   case "producto":
     $dataArray = [
@@ -43,17 +42,6 @@ switch ($table) {
     $dataArray = [
       "categoria" => [
         "nombre" => $_POST["nombre"],
-      ],
-    ];
-    break;
-
-  case "historial":
-    $dataArray = [
-      "historial" => [
-        "descripcion" => $_POST["nombre"],
-        "fecha" => $_POST["fecha"],
-        "fk_cuenta" => $_POST["cuenta"],
-        "fk_producto" => $_POST["producto"],
       ],
     ];
     break;
@@ -78,6 +66,5 @@ switch ($table) {
 require_once $_SERVER["DOCUMENT_ROOT"] . "/utils/function.php";
 createObject($table, $dataArray);
 
-//Redirect to previous page
-header("Location: /$table.php");
+header("Location: /$table.php?descripcion=Item+created");
 ?>
