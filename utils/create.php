@@ -29,23 +29,19 @@ $table = $_POST["table"];
 switch ($table) {
   case "producto":
     $dataArray = [
-      "producto" => [
-        "nombre" => $_POST["nombre"],
-        "precio" => $_POST["precio"],
-        "stock" => $_POST["stock"],
-        "categoria" => $_POST["categoria"],
-      ],
+      "nombre" => $_POST["nombre"],
+      "precio" => $_POST["precio"],
+      "stock" => $_POST["stock"],
+      "categoria" => $_POST["categoria"],
     ];
     break;
 
   case "cuenta":
     $dataArray = [
-      "cuenta" => [
-        "username" => $_POST["username"],
-        "email" => $_POST["email"],
-        "telefono" => $_POST["telefono"],
-        "password" => $_POST["password"], //Needs encryption
-      ],
+      "username" => $_POST["username"],
+      "email" => $_POST["email"],
+      "telefono" => $_POST["telefono"],
+      "password" => $_POST["password"], //Needs encryption
     ];
     break;
 

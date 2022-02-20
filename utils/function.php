@@ -46,7 +46,7 @@ function createObject($table, $dataArray)
 	switch ($table) {
 		case "producto":
 			$query = "INSERT INTO $table (nombre, precio, stock, categoria) VALUES (?, ?, ?, ?);";
-			$dataTypes = "sdii";
+			$dataTypes = "sdis";
 			$stmt = mysqli_prepare($conn, $query);
 			mysqli_stmt_bind_param(
 				$stmt,
@@ -54,30 +54,26 @@ function createObject($table, $dataArray)
 				$nombre,
 				$precio,
 				$stock,
-				$fk_categoria
+				$categoria
 			);
-			$nombre = $dataArray["producto"]["nombre"];
-			$precio = $dataArray["producto"]["precio"];
-			$stock = $dataArray["producto"]["stock"];
-			$categoria = $dataArray["producto"]["categoria"];
+			$nombre = $dataArray["nombre"];
+			$precio = $dataArray["precio"];
+			$stock = $dataArray["stock"];
+			$categoria = $dataArray["categoria"];
 			break;
 
 		case "cuenta":
-			$query = "INSERT INTO $table (username, email, telefono, password) VALUES (?, ?, ?, ?);";
-			$dataTypes = "ssss";
+			$query = "INSERT INTO $table (username, password) VALUES (?, ?);";
+			$dataTypes = "ss";
 			$stmt = mysqli_prepare($conn, $query);
 			mysqli_stmt_bind_param(
 				$stmt,
 				$dataTypes,
 				$username,
-				$email,
-				$telefono,
 				$password
 			);
-			$username = $dataArray["cuenta"]["username"];
-			$email = $dataArray["cuenta"]["email"];
-			$telefono = $dataArray["cuenta"]["telefono"];
-			$password = $dataArray["cuenta"]["password"];
+			$username = $dataArray["username"];
+			$password = $dataArray["password"];
 			break;
 
 		default:

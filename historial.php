@@ -6,6 +6,7 @@ if (!(isset($_SESSION["id"]) && isset($_SESSION["username"]))) {
   include_once "utils/logout.php";
 }
 
+include "utils/function.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -74,13 +75,7 @@ if (!(isset($_SESSION["id"]) && isset($_SESSION["username"]))) {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>2022-02-12</td>
-              <td>Update: se vendieron X productos</td>
-              <td>Limpiador</td>
-              <td>Simon</td>
-            </tr>
+          <?php getAllData("historial"); ?>
           </tbody>
         </table>
       </div>
