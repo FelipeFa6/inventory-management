@@ -33,15 +33,7 @@ switch ($table) {
         "nombre" => $_POST["nombre"],
         "precio" => $_POST["precio"],
         "stock" => $_POST["stock"],
-        "fk_categoria" => $_POST["categoria"],
-      ],
-    ];
-    break;
-
-  case "categoria":
-    $dataArray = [
-      "categoria" => [
-        "nombre" => $_POST["nombre"],
+        "categoria" => $_POST["categoria"],
       ],
     ];
     break;

@@ -46,7 +46,7 @@ function createObject($table, $dataArray)
   $conn = require_once $_SERVER["DOCUMENT_ROOT"] . "/utils/connection.php"; //Create connection
   switch ($table) {
     case "producto":
-      $query = "INSERT INTO $table (nombre, precio, stock, fk_categoria) VALUES (?, ?, ?, ?);";
+      $query = "INSERT INTO $table (nombre, precio, stock, categoria) VALUES (?, ?, ?, ?);";
       $dataTypes = "sdii";
       $stmt = mysqli_prepare($conn, $query);
       mysqli_stmt_bind_param(
@@ -60,15 +60,7 @@ function createObject($table, $dataArray)
       $nombre = $dataArray["producto"]["nombre"];
       $precio = $dataArray["producto"]["precio"];
       $stock = $dataArray["producto"]["stock"];
-      $fk_categoria = $dataArray["producto"]["fk_categoria"];
-      break;
-
-    case "categoria":
-      $query = "INSERT INTO $table (nombre) VALUES (?);";
-      $dataTypes = "s";
-      $stmt = mysqli_prepare($conn, $query);
-      mysqli_stmt_bind_param($stmt, $dataTypes, $nombre);
-      $nombre = $dataArray["categoria"]["nombre"];
+      $categoria = $dataArray["producto"]["categoria"];
       break;
 
     case "cuenta":

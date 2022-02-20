@@ -150,15 +150,11 @@ include "utils/function.php";
           />
           <span class="input-group-text">Categoria</span>
           <input
+            type="text"
             class="form-control"
-            list="categoryList"
-            id="search"
             name="categoria"
             id="input-categoria"
           />
-          <datalist id="categoryList">
-            <!--Fill this with the database -->
-          </datalist>
         </div>
 
         <input

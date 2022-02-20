@@ -80,35 +80,10 @@
                 >
                   <div class="ms-4">
                     <p class="h3">Productos</p>
-                    <p class="text-muted">2000</p>
+                    <p class="text-muted"></p>
                   </div>
                   <div class="display-2">
                     <i class="fa-solid fa-cart-flatbed"></i>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <!--Column2-->
-            <div class="col m-3">
-              <a href="categoria.php" class="text-dark">
-                <div
-                  class="
-                    item
-                    rounded
-                    p-4
-                    border
-                    bg-light
-                    d-flex
-                    align-items-center
-                    justify-content-between
-                  "
-                >
-                  <div class="ms-4">
-                    <p class="h3 text-center">Categorias</p>
-                    <p class="text-muted">5</p>
-                  </div>
-                  <div class="display-2">
-                    <i class="fa-solid fa-file"></i>
                   </div>
                 </div>
               </a>
@@ -135,7 +110,7 @@
                 >
                   <div class="ms-4">
                     <p class="h3">Historial</p>
-                    <p class="text-muted">2000 acciones</p>
+                    <p class="text-muted"></p>
                   </div>
                   <div class="display-2">
                     <i class="fa-solid fa-box-archive"></i>
