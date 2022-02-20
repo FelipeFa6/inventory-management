@@ -108,7 +108,6 @@ if (isset($_SESSION["id"]) && isset($_SESSION["username"])) {
             </div>
             <div class="d-grid gap-3">
               <button type="submit" id="submit" name="submit" class="btn btn-dark rounded">Submit</button>
-              <a href="home.php" class="g-2">Volver</a>
             </div>
           </form>
         </div>
