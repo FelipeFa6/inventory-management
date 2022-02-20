@@ -43,7 +43,7 @@ if (isset($_SESSION["id"]) && isset($_SESSION["username"])) {
         var link = document.createElement("link");
         link.type = "text/css";
         link.rel = "stylesheet";
-        link.href = "lib/css/bootstrap-5.1.3.css";
+        link.href = "lib/bootstrap-5.1.3.css";
 
         document.head.appendChild(link);
       }
@@ -60,7 +60,7 @@ if (isset($_SESSION["id"]) && isset($_SESSION["username"])) {
     <!-- jQuery local fallback -->
     <script>
       window.jQuery ||
-        document.write('<script src="lib/js/jquery-3.6.0.js"><\/script>');
+        document.write('<script src="lib/jquery-3.6.0.js"><\/script>');
     </script>
 
     <!-- Bootstrap JS Bundle CDN -->
@@ -72,7 +72,7 @@ if (isset($_SESSION["id"]) && isset($_SESSION["username"])) {
     <!-- Bootstrap JS Bundle local fallback -->
     <script>
       if (typeof $.fn.modal === "undefined") {
-        document.write('<script src="lib/js/bootstrap.bundle.js"><\/script>');
+        document.write('<script src="lib/bootstrap.bundle.js"><\/script>');
       }
     </script>
   </head>
@@ -137,7 +137,7 @@ if (isset($_SESSION["id"]) && isset($_SESSION["username"])) {
     <!-- Bootstrap JS Bundle local fallback -->
     <script>
       if (typeof $.fn.modal === "undefined") {
-        document.write('<script src="lib/js/bootstrap.bundle.js"><\/script>');
+        document.write('<script src="lib/bootstrap.bundle.js"><\/script>');
       }
     </script>
   </body>
