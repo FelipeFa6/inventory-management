@@ -1,14 +1,13 @@
 <?php
-/* See LICENSE file for copyright and license details.
- * 
- * ToDo:
- * - Verify data (If possible, use php on the same file).
- * - Make use of functions.php file to login.
- * - Start session and redirect to index. 
- *
- */
-?>
+/* See LICENSE file for copyright and license details.*/
 
+session_start();
+
+// Destroy session if exists
+if (isset($_SESSION["id"]) && isset($_SESSION["username"])) {
+  include_once "utils/logout.php";
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -83,29 +82,32 @@
       <div class="row h-100 justify-content-center align-items-center">
         <div id="login-container" class="glass p-5 rounded-1">
           <h1 class="text-center">Login</h1>
-          <form method="get">
+          <form class="py-2" method="POST" action="utils/login.php">
+            <span class="text-danger">
+              <?php if (isset($_GET["login"])) {
+                echo "Usuario o contraseña incorrectos.";
+              } ?>
+            </span>
             <div class="mb-3">
-              <label for="InputEmail" class="form-label">Email address</label>
+              <label for="InputEmail" class="form-label">Username</label>
               <input
-                type="email"
+                type="text"
                 class="form-control rounded-pill border-secondary"
-                id="inputEmail"
-                aria-describedby="emailHelp"
+                id="username"
+                name="username"
               />
-              <div id="emailHelp" class="form-text">
-                We'll never share your email with anyone else.
-              </div>
             </div>
             <div class="mb-3">
               <label for="inputPassword" class="form-label">Password</label>
               <input
                 type="password"
                 class="form-control rounded-pill border-secondary"
-                id="inputPassword"
+                id="password"
+                name="password"
               />
             </div>
             <div class="d-grid gap-3">
-              <button type="submit" class="btn btn-dark rounded">Submit</button>
+              <button type="submit" id="submit" name="submit" class="btn btn-dark rounded">Submit</button>
               <a href="index.php" class="g-2">Volver</a>
             </div>
           </form>

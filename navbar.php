@@ -1,16 +1,5 @@
 <?php
-/* See LICENSE file for copyright and license details.
- *
- * Dependencies:
- * - Bootstrap 5.1
- * 
- * ToDo:
- * - Use session arguments (Should be loaded in the parent file).
- * - Close session.
- * - Highlight current file [Home, Historial, etc]
- * - Make the searchbar usable.
- *
- */
+/* See LICENSE file for copyright and license details.*/
 ?>
 
 <style type="text/css" media="screen">
@@ -68,9 +57,6 @@
               <a class="dropdown-item" href="historial.php">Historial</a>
             </li>
             <li><a class="dropdown-item" href="producto.php">Productos</a></li>
-            <li>
-              <a class="dropdown-item" href="categoria.php">Categorias</a>
-            </li>
           </ul>
         </li>
       </ul>
@@ -97,13 +83,13 @@
               aria-expanded="false"
             >
               <i class="fa-solid fa-user"></i>
-              Mi Cuenta
+              <?php echo $_SESSION['username']; ?>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="#">Opciones</a></li>
               <li><hr class="dropdown-divider" /></li>
               <li>
-                <a class="dropdown-item text-danger" href="#"
+                <a class="dropdown-item text-danger" href="utils/logout.php"
                   >Cerrar sesion
                   <i class="fa-solid fa-arrow-right-from-bracket"></i
                 ></a>

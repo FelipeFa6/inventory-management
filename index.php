@@ -4,6 +4,12 @@
  * file: index.php
  *
  */
+
+session_start();
+
+if (!(isset($_SESSION["id"]) && isset($_SESSION["username"]))) {
+  include_once "utils/logout.php";
+}
 ?>
 
 <!DOCTYPE html>

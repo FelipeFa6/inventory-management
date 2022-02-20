@@ -7,7 +7,11 @@
  *
  */
 
-$_POST["table"] = "producto";
+session_start();
+if (!(isset($_SESSION["id"]) && isset($_SESSION["username"]))) {
+  include_once "utils/logout.php";
+}
+
 include "utils/function.php";
 ?>
 <!DOCTYPE html>
@@ -77,7 +81,7 @@ include "utils/function.php";
             </tr>
           </thead>
           <tbody>
-          <?php getAllData($_POST["table"]); ?>
+          <?php getAllData("producto"); ?>
           </tbody>
         </table>
       </div>

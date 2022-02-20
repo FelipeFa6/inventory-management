@@ -1,6 +1,11 @@
 <?php
 /* See LICENSE file for copyright and license details.*/
 
+session_start();
+if (!(isset($_SESSION["id"]) && isset($_SESSION["username"]))) {
+  include_once "utils/logout.php";
+}
+
 ?>
 <!DOCTYPE html>
 <html>
