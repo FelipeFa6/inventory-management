@@ -9,7 +9,7 @@ function printTable($result, $table)
 				echo "<td>" . $array["nombre"] . "</td>";
 				echo "<td>" . $array["precio"] . "</td>";
 				echo "<td>" . $array["stock"] . "</td>";
-				echo "<td>" . $array["fk_categoria"] . "</td>";
+				echo "<td>" . $array["categoria"] . "</td>";
 				echo "</tr>";
 				break;
 
