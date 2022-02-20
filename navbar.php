@@ -23,7 +23,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="index.php">Inventario</a>
+    <a class="navbar-brand" href="home.php">Inventario</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -38,7 +38,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php"
+          <a class="nav-link active" aria-current="page" href="home.php"
             >Home</a
           >
         </li>

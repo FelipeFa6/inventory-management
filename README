@@ -10,10 +10,9 @@ FOLDER TREE
   To avoid unncesesary complexity, pages are located on the root.
 
 root/
-├── index.php
+├── home.php
 ├── login.php
 ├── productos.php
-├── categorias.php
 ├── historial.php
 ├── navbar.php
 │
